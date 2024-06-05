@@ -17,15 +17,41 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div style="position: relative; width: 100%; height: 0; padding-top: 177.7778%; 
+        <!-- <div style="position: relative; width: 100%; height: 0; padding-top: 177.7778%; 
             padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; will-change: transform;">
             <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" 
                 src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGHPfMpi-0&#x2F;6MisdgtiflPzSXBBp7anIg&#x2F;view?embed">
+            </iframe>
+        </div> -->
+
+        <div class="iframe-container">
+            <iframe id="canva-iframe" loading="lazy" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGHPfMpi-0&#x2F;6MisdgtiflPzSXBBp7anIg&#x2F;view?embed">
             </iframe>
         </div>
         
         <!-- <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGHPfMpi-0&#x2F;6MisdgtiflPzSXBBp7anIg&#x2F;view?utm_content=DAGHPfMpi-0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Design</a> by Zuhad Harkasy -->
         
         <script src="" async defer></script>
+        <script>
+            // Attempt to hide elements in the iframe after it loads
+            document.getElementById('canva-iframe').onload = function() {
+                const iframe = document.getElementById('canva-iframe');
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    
+                // Add custom CSS to hide elements within the iframe
+                const style = iframeDocument.createElement('style');
+                style.innerHTML = `
+                    /* Hide the share button and slide number */
+                    .toolbar, .page-number {
+                        display: none !important;
+                    }
+                    /* Ensure the left and right buttons are visible */
+                    .navigation-button-left, .navigation-button-right {
+                        display: block !important;
+                    }
+                `;
+                iframeDocument.head.appendChild(style);
+            };
+        </script>
     </body>
 </html>
