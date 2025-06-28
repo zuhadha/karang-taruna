@@ -14,11 +14,11 @@
   </head>
   <body>
     <div class="iframe-container">
-
+<!-- 
         <div id="iframe-placeholder" class="iframe-placeholder">
             <img src="karta-day1.jpg" alt="Memuat..." />
             <p>Memuat tampilan, mohon tunggu...</p>
-          </div>
+          </div> -->
 
       <iframe
         id="canva-iframe"
@@ -26,7 +26,7 @@
         src="https://www.canva.com/design/DAGrjx4_n9U/SryIRhKBD3NZr-qG8XY81A/view?embed&mode=present"
         allowfullscreen="allowfullscreen"
         allow="fullscreen"
-        onload="hidePlaceholder()"
+
       ></iframe>
       <div class="iframe-overlay"></div>
       <div class="iframe-toolbar-blocker">
@@ -47,12 +47,12 @@
 
     <script>
 
-function hidePlaceholder() {
-    const placeholder = document.getElementById("iframe-placeholder");
-    if (placeholder) {
-      placeholder.style.display = "none";
-    }
-  }
+// function hidePlaceholder() {
+//     const placeholder = document.getElementById("iframe-placeholder");
+//     if (placeholder) {
+//       placeholder.style.display = "none";
+//     }
+//   }
 
         function goToPage(page) {
           const iframe = document.getElementById("canva-iframe");
@@ -72,10 +72,10 @@ function hidePlaceholder() {
               btnToPage1.style.display = "none";
             }
 
-            const placeholder = document.getElementById("iframe-placeholder");
-      if (placeholder) {
-        placeholder.style.display = "flex";
-      }
+    //         const placeholder = document.getElementById("iframe-placeholder");
+    //   if (placeholder) {
+    //     placeholder.style.display = "flex";
+    //   }
           }
         }
       </script>
