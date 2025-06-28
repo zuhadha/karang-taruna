@@ -85,3 +85,25 @@ iframe {
 .nav-button:hover {
   background-color: var(--button-hover);
 }
+
+.iframe-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3D1F79;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.iframe-placeholder img {
+  max-width: 120px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
