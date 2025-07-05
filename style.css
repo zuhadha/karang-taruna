@@ -24,7 +24,7 @@ body {
   will-change: transform;
   /* clip-path: inset(0px 0px 75px 0px); */
 
-  background-image: url('mohon-tunggu-sebentar.gif'); /* ganti dengan path gambarmu */
+  background-image: url("loading feed.gif"); /* ganti dengan path gambarmu */
   background-size: cover; /* agar gambar mengisi seluruh layar */
   background-position: center; /* posisi tengah */
   background-repeat: no-repeat; /* tidak mengulang */
